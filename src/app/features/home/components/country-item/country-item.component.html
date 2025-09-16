@@ -1,0 +1,10 @@
+<div class="country-item">
+  <img
+    class="country-item__img"
+    src="https://date.nager.at/images/circle-flags/flags/{{
+      country()?.countryCode | lowercase
+    }}.svg"
+    alt="{{ country()?.name }} flag"
+  />
+  <span class="country-item__name">{{ country()?.name }}</span>
+</div>
