@@ -72,12 +72,6 @@ The compiled files will be located in the `dist/` folder.
 npm run lint
 ```
 
-- Auto-fix lint issues:
-
-```bash
-npm run lint -- --fix
-```
-
 - Format code:
 
 ```bash

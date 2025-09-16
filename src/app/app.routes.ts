@@ -13,4 +13,5 @@ export const routes: Routes = [
       import('./features/country/country.component').then((m) => m.CountryComponent),
   },
   { path: AppRoutes.NOT_FOUND, component: NotFoundComponent },
+  { path: '**', redirectTo: AppRoutes.NOT_FOUND },
 ];

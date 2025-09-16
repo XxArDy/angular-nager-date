@@ -15,13 +15,13 @@ import { DataService } from '../../../../shared/services/data.service';
   styleUrls: ['./random-countries-widget.component.scss'],
 })
 export class RandomCountriesWidgetComponent {
-  private dataService = inject(DataService);
+  private _dataService = inject(DataService);
 
-  randomCountriesData$ = this.dataService.getAllCountries().pipe(
+  randomCountriesData$ = this._dataService.getAllCountries().pipe(
     map((countries) => this.getRandomCountries(countries, 3)),
     switchMap((randomCountries) => {
       const requests = randomCountries.map((country) =>
-        this.dataService.getNextHolidays(country.countryCode).pipe(
+        this._dataService.getNextHolidays(country.countryCode).pipe(
           map((holidays) => ({
             country,
             holiday: holidays?.[0] || null,

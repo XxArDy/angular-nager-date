@@ -28,13 +28,13 @@
   text-align: center;
   width: 100%;
 
-  .holiday-name {
+  &__name {
     font-size: 16px;
     font-weight: 600;
     color: #333;
   }
 
-  .holiday-date {
+  &__date {
     font-size: 14px;
     color: #007bff;
     font-weight: 500;
@@ -44,7 +44,7 @@
     display: inline-block;
   }
 
-  .holiday-local {
+  &__local {
     font-size: 13px;
     color: #6c757d;
     font-style: italic;

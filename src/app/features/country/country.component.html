@@ -1,1 +1,18 @@
-<p>country works!</p>
+@let countryInfo = countryInfo$ | async;
+
+<header class="country-header">
+  <button mat-icon-button class="country-header__back" (click)="goBack()">
+    <mat-icon>arrow_back</mat-icon>
+  </button>
+
+  <img
+    class="country-header__img"
+    src="https://date.nager.at/images/circle-flags/flags/{{
+      countryInfo?.countryCode | lowercase
+    }}.svg"
+    alt="{{ countryInfo?.officialName }} flag"
+  />
+  <span class="country-header__text">Public Holidays in {{ countryInfo?.officialName }}</span>
+</header>
+<app-borders-info [borders]="countryInfo?.borders"></app-borders-info>
+<app-holidays-list [countryCode]="countryInfo?.countryCode ?? ''"></app-holidays-list>

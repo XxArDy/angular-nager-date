@@ -1,5 +1,5 @@
 export enum AppRoutes {
   HOME = '',
   COUNTRY = 'country',
-  NOT_FOUND = '**',
+  NOT_FOUND = 'not-found',
 }

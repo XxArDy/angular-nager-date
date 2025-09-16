@@ -1,3 +1,4 @@
+import { NavigationService } from './../../shared/services/navigation.service';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { MatInputModule } from '@angular/material/input';
@@ -25,6 +26,7 @@ import { BehaviorSubject, combineLatest, startWith, map } from 'rxjs';
 })
 export class HomeComponent {
   private _dataService = inject(DataService);
+  private _navigationService = inject(NavigationService);
 
   private searchTerm$ = new BehaviorSubject<string>('');
 
@@ -44,5 +46,9 @@ export class HomeComponent {
 
   onSearch(value: string) {
     this.searchTerm$.next(value);
+  }
+
+  onCountryClick(countryCode: string) {
+    this._navigationService.goToCountry(countryCode);
   }
 }

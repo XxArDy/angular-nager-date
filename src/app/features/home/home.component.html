@@ -13,7 +13,10 @@
 
 <div class="countries-grid">
   @for (country of countries$ | async; track country.countryCode) {
-    <app-country-item [country]="country"></app-country-item>
+    <app-country-item
+      [country]="country"
+      (click)="onCountryClick(country.countryCode)"
+    ></app-country-item>
   } @empty {
     <div class="no-results">
       <mat-icon>search_off</mat-icon>

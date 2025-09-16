@@ -1,0 +1,15 @@
+.table {
+  margin: 20px 0;
+}
+
+.pagination {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+
+.active-year {
+  font-weight: bold;
+  box-shadow: 0 0 0 2px var(--mat-primary);
+}

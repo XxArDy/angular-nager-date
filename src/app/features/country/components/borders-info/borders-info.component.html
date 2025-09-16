@@ -1,0 +1,21 @@
+@if (borders()) {
+  <section class="borders">
+    @for (border of borders(); track $index) {
+      <div
+        class="border-item"
+        tabindex="0"
+        (click)="onCountryClick(border.countryCode)"
+        (keydown)="handleKeydown($event, border.countryCode)"
+      >
+        <img
+          class="border-item__img"
+          src="https://date.nager.at/images/circle-flags/flags/{{
+            border.countryCode | lowercase
+          }}.svg"
+          alt="{{ border.officialName }} flag"
+        />
+        <span class="border-item__name">{{ border.officialName }}</span>
+      </div>
+    }
+  </section>
+}
