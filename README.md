@@ -31,7 +31,7 @@ It allows users to search for countries, view their public holidays, and quickly
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/angular-nager-date.git
+git clone https://github.com/XxArDy/angular-nager-date.git
 cd angular-nager-date
 ```
 
