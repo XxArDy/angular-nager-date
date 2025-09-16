@@ -1,59 +1,89 @@
-# AngularNagerDate
+# Angular Nager.Date Holidays App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.2.2.
+This application is built with **Angular 20** using **Angular Material** and integrates with the [Nager.Date API](https://date.nager.at/).  
+It allows users to search for countries, view their public holidays, and quickly switch between years.
 
-## Development server
+## 🚀 Features
 
-To start a local development server, run:
+### Home Page
+
+- **Country Search** — search for countries by name with live data from the API.
+- **Country List** — clickable country names that navigate to the Country Page.
+- **Random Countries Widget** — displays 3 random countries and their next upcoming holiday (name and date).
+- **Navigation** — seamless routing between the Home Page and Country Page.
+
+### Country Page
+
+- **Holiday List** — shows all holidays for the selected country and the current year.
+- **Year Switching** — buttons for years 2020–2030 to view holidays for different years.
+- **Holiday Details** — includes holiday name, date, and type.
+
+## 🛠️ Tech Stack
+
+- **Angular 20**
+- **Angular Material**
+- **TypeScript**
+- **ESLint + Prettier** (configured for consistent code style)
+- **Nager.Date API**
+
+## 📦 Installation & Running
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/angular-nager-date.git
+cd angular-nager-date
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Start the development server
+
+```bash
+npm start
+```
+
+or
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+The app will be available at:  
+[http://localhost:4200](http://localhost:4200)
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### 4. Build for production
 
 ```bash
-ng generate --help
+npm run build
 ```
 
-## Building
+The compiled files will be located in the `dist/` folder.
 
-To build the project run:
+## 🔍 Linting & Formatting
+
+- Lint the code:
 
 ```bash
-ng build
+npm run lint
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+- Auto-fix lint issues:
 
 ```bash
-ng test
+npm run lint -- --fix
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+- Format code:
 
 ```bash
-ng e2e
+npm run format
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## 🌐 API
 
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+This project uses the [Nager.Date API](https://date.nager.at/Api) to fetch country and holiday data.
